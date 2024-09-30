@@ -1,0 +1,28 @@
+const suma = require('../suma.js');
+const resta = require('../resta.js');
+const chai = require('chai');
+const expect = chai.expect;
+
+
+
+describe("Sumando 4 mas 5", ()=>{
+
+    it("sumar 5 y 4", ()=>{
+        const resultado = suma(5, 4);
+        //expect en español es esperar
+        expect(resultado).to.equal(9);
+        expect(resultado).to.greaterThan(1);
+        expect(resultado).to.greaterThanOrEqual(9);
+        expect(resultado).to.lessThan(10);
+        expect(resultado).to.lessThanOrEqual(9);
+
+    })
+
+    it("restar 5 - 2", ()=>{
+        const resultado = resta(5, 2);
+        expect(resultado).to.equal(3);
+    })
+
+});
+
+
